@@ -1,0 +1,29 @@
+<div class='d-flex justify-content-center align-items-center login-wrapper'>
+  <form name='logForm' class="css-form">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        ng-model='user.email'
+        required
+        name='email'
+        type="email"
+        ng-class="appliedClass()"
+        id="exampleInputEmail1">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        ng-class="appliedClass()"
+        required
+        ng-model='user.password'
+        name='password'
+        type="password"
+        id="exampleInputPassword1">
+    </div>
+    <button ng-disabled='logForm.$invalid' ng-click='onSubmit()' type="submit" class="btn btn-primary">Submit</button>
+    <button ng-click='onChangeLogType()' type="button" class="btn btn-link">
+      {{ logType === 'LOGIN' ? 'Sign Up' : 'Log In' }}
+    </button>
+
+  </form>
+</div>

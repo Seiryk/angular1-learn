@@ -1,0 +1,7 @@
+.login-wrapper {
+  height: 100%;
+}
+
+.css-form input.ng-invalid.ng-touched {
+  border-color: #dc3545;
+}
